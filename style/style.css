@@ -11,7 +11,7 @@
 /* Font face import */
 @font-face {
     font-family: Poppins;
-    src: url(../font/JosefinSans-VariableFont_wght.ttf);
+    src: url(../font/NovaRound-Regular.ttf);
 }
 
 
@@ -51,6 +51,7 @@ html {
 .nav {
     position: sticky;
     top: 0;
+    background-color: #00000001;
 }
 
 header {
@@ -74,13 +75,83 @@ body {
 
 .box {
     width: 90vw;
-    height: 200vh;
     margin: auto auto;
     margin-top: 5vh;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
     background-image: linear-gradient(45deg, #9471f1, #c8b3f6, #f5f1ff);
+}
+
+/* -------- Main Section CSS --------  */
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: cover; */
+    display: flex;
+    align-items: center;
+    /* padding-left: 100px; */
+}
+
+.main-text {
+    width: 30vw;
+}
+
+.main-text h1 {
+    font-size: 5vw;
+}
+
+.main-text p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.main-img img {
+    width: 20vw;
+    margin-left: 5vw;
+    /* text-shadow: 2px 2px 10px var(--black); */
+}
+
+.offerings {
+    padding: 50px;
+}
+
+.offerings h1 {
+    text-align: center;
+    font-size: 5vw;
+    margin: 50px;
+}
+
+.category {
+    display: flex;
+    width: 60vw;
+    margin: auto auto;
+}
+
+
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    .main-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-text h1 {
+        font-size: 10vw;
+    }
+
+    .main-text p {
+        padding: 10px 40px;
+    }
+
+    .main-img img {
+        width: 50vw;
+    }
 }
 
 /* Scroll Bar CSS */

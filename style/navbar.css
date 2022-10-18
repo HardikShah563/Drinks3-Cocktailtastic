@@ -1,6 +1,7 @@
 /* variable css */
 :root {
     --black: #000000;
+    --grey: #858585;
     --purple: #622a95;
     --dark-lavender: #9471f1;
     --lavander: #c8b3f6;
@@ -12,11 +13,25 @@
 nav {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 }
 
 /* ---- navigation bar links ---- */
+.logo {
+    display: none;
+    /* position: relative; */
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px var(--white);
+}
+
+.logo .purple {
+    color: var(--purple);
+}
+
 .nav-links {
     display: flex;
     text-align: center;
@@ -52,7 +67,14 @@ nav {
 
 @media (max-width: 700px) {
     nav {
-        margin: 0;
+        margin: 0 0;
+        padding: 20px 30px;
+        justify-content: space-between;
+        background-color: #00000011;
+    }
+
+    .logo {
+        display: flex;
     }
 
     .nav-lines {
@@ -66,28 +88,28 @@ nav {
         z-index: 3;
         margin: 0 0;
         display: block;
-        top: 7vh;
+        top: 8vh;
         left: 0;
-        right: 0;
-        width: 0;
-        /* height: 93vh; */
-        background-color: var(--off-white);
+        right: 0px;
+        width: 100%;
+        height: 0vw;
+        background-color: #00000011;
         transform: 200ms;
         overflow: hidden;
         transition: 200ms;
-        border-top-right-radius: 40px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
     }
 
     .nav-links.active {
-        width: 80vw;
+        height: 40vh;
         padding: 20px;
-        box-shadow: 20px 20px 100px var(--black);
     }
 
     .nav-links li {
         justify-content: center;
         padding: 20px 0;
-        text-align: left;
+        text-align: center;
         border-bottom: 1px solid var(--grey);
     }
 }
