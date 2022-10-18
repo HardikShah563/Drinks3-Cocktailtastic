@@ -61,9 +61,8 @@ header {
 }
 
 .main {
-    height: 90vh;
+    height: 80vh;
 }
-
 
 body {
     background: linear-gradient(to right, 
@@ -71,6 +70,10 @@ body {
     var(--white) 50%, 
     var(--purple) 50%, 
     var(--purple) 100%);
+}
+
+.purple {
+    color: var(--purple);
 }
 
 .box {
@@ -88,18 +91,18 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* height: cover; */
     display: flex;
     align-items: center;
-    /* padding-left: 100px; */
 }
 
 .main-text {
-    width: 30vw;
+    width: 40vw;
+    margin-right: 100px;
 }
 
 .main-text h1 {
-    font-size: 5vw;
+    font-size: 7vw;
+    text-shadow: 2px 2px 2px var(--white);
 }
 
 .main-text p {
@@ -112,7 +115,7 @@ body {
     margin-left: 5vw;
 }
 
-.offerings {
+.offerings-list {
     padding: 50px;
     width: 80vw;
     margin: auto auto;
@@ -124,15 +127,40 @@ body {
     margin: 50px;
 }
 
+
+
+@media (max-width: 1000px) {
+    .main {
+        height: 60vh;
+    }
+
+    .main-text {
+        margin-right: 50px;
+    }
+
+    .main-text h1 {
+        /* font-size: 6.5vw; */
+    }
+
+    .main-img img {
+        width: 30vw;
+    }
+
+    .offerings h1 {
+        font-size: 7vw;
+    }
+}
+
 @media (max-width: 600px) {
     .main {
+        height: 80vh;
         flex-direction: column-reverse;
-        height: 100vh;
     }
 
     .main-text {
         width: 100%;
         text-align: center;
+        margin-right: 0px;
     }
 
     .main-text h1 {
@@ -141,10 +169,15 @@ body {
 
     .main-text p {
         padding: 10px 40px;
+        font-size: 16px;
     }
 
     .main-img img {
-        width: 50vw;
+        width: 45vw;
+    }
+
+    .offerings h1 {
+        font-size: 10vw;
     }
 }
 
