@@ -77,10 +77,68 @@ form {
 
 form p {
     margin: 20px 0 0 0;
+    font-size: 20px;
 }
 
 form input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     margin: 10px 0 0 0;
+    background-color: var(--light-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+}
+
+.register-statement {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.register-statement a {
+    border-bottom: 1px solid var(--purple);
+}
+
+.submit-button {
+    width: 100%;
+    height: 35px;
+    margin: 20px 0 0 0;
+    background-color: var(--dark-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+}
+
+.submit-button a {
+    color: var(--light-lavender);
+    font-size: 20px;
+}
+
+
+
+@media (max-width: 800px) {
+    .login-register-box h1 {
+        font-size: 7vw;
+    }
+
+    .register-statement {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-register-box  h1 {
+        font-size: 10vw;
+    }
+
+    form {
+        width: 85vw;
+    }
+
+    form p {
+        font-size: 14px;
+    }
+
+    .register-statement {
+        font-size: 10px;
+    }
 }

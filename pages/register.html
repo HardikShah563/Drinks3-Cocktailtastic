@@ -33,13 +33,19 @@
         </section>
 
         <section class="login-register-box">
-            <h1>Log into an existing account</h1>
+            <h1>Register new account</h1>
             <form>
+                <p>Name: </p>
+                <input type="text" name="name" id="name" required>
+                <p>Contact Number: </p>
+                <input type="number" name="phone-num" id="phone-num" required>
                 <p>Email Address/Username: </p>
-                <input type="email" name="email" id="email">
-                <p>Password: </p>
-                <input type="password" name="password" id="password">
-                <button class="submit-button" type="submit"><a href="./offerings.html">Log In</a></button>
+                <input type="email" name="email" id="email" required>
+                <p>Create Password: </p>
+                <input type="password" name="password" id="password" required>
+                <p>Retype Password: </p>
+                <input type="password" name="password" id="password" required>
+                <button class="submit-button" type="submit"><a href="./offerings.html">Register</a></button>
             </form>
             <p class="register-statement">Don't have an account?&nbsp;<a href="./register.html">Create New Account here</a></p>
         </section>
