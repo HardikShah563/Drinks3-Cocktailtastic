@@ -86,6 +86,17 @@ body {
     background-image: linear-gradient(45deg, #9471f1, #c8b3f6, #f5f1ff);
 }
 
+hr {
+    width: 60vw;
+    margin: auto auto;
+    border: 1px solid var(--lavander);
+    border-radius: 10px;
+}
+
+.main-margin {
+    margin: 100px auto;
+}
+
 /* -------- Main Section CSS --------  */
 .main {
     display: flex;
@@ -117,8 +128,12 @@ body {
 
 .offerings-list {
     padding: 50px;
-    width: 80vw;
+    width: 60vw;
     margin: auto auto;
+}
+
+.offerings-list h3 {
+    font-size: 30px;
 }
 
 .offerings h1 {
@@ -127,7 +142,76 @@ body {
     margin: 50px;
 }
 
+.offerings-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+.offerings-button a:hover {
+    background-color: var(--dark-lavender);
+}
+
+.offerings-button a {
+    padding: 10px 100px;
+    color: var(--light-lavender);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 50px;
+    transition-duration: 200ms;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px 20px 0px;
+}
+
+.category li {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--light-lavender);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 20px;
+    transition-duration: 200ms;
+}
+
+.category li:hover {
+    background-color: var(--dark-lavender);
+}
+
+/* -------- Contact Section --------- */
+.contact-form {
+    width: 40vw;
+    margin: auto auto;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    resize: none;
+}
+
+
+/* -------- Footer Section --------- */
+footer {
+    height: 100px;
+    text-align: center;
+}
+
+footer p {
+    margin: 20px;
+    font-weight: 500;
+}
+
+.copyright-icon {
+    font-size: 20px;
+}
 
 @media (max-width: 1000px) {
     .main {
@@ -138,12 +222,12 @@ body {
         margin-right: 50px;
     }
 
-    .main-text h1 {
-        /* font-size: 6.5vw; */
-    }
-
     .main-img img {
         width: 30vw;
+    }
+
+    .offerings-list {
+        width: 80vw;
     }
 
     .offerings h1 {
@@ -176,8 +260,26 @@ body {
         width: 45vw;
     }
 
+    .offerings-list {
+        width: 98vw;
+    }
+
     .offerings h1 {
         font-size: 10vw;
+    }
+
+    .offerings-button a {
+        font-size: 12px;
+        padding: 10px 18vw;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    .copyright-icon {
+        font-size: 15px;
+        font-weight: 500;
     }
 }
 
