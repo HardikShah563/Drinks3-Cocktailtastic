@@ -10,6 +10,11 @@
 }
 
 /* ---- navigation bar css ---- */
+.nav {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -47,7 +52,7 @@ nav {
 }
 
 .nav-links li:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     font-weight: 800;
 }
 
@@ -78,7 +83,6 @@ nav {
 
     .nav-lines {
         display: flex;
-        /* justify-content: left; */
         cursor: pointer;
     }
 
@@ -102,7 +106,7 @@ nav {
     }
 
     .nav-links.active {
-        height: 30vh;
+        height: 35vh;
         padding: 20px;
     }
 
@@ -110,6 +114,6 @@ nav {
         justify-content: center;
         padding: 20px 0;
         text-align: center;
-        border-bottom: 1px solid var(--grey);
+        border-bottom: 1px solid var(--dark-lavender);
     }
 }
