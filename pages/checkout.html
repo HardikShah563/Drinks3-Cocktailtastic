@@ -9,7 +9,6 @@
     <!-- Including Style Sheet-->
     <link rel="stylesheet" href="./../style/navbar.css" />
     <link rel="stylesheet" href="./../style/checkout.css" />
-    <link rel="stylesheet" href="./../style/style.css" />
     <!-- Including Icons -->
     <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
     <!-- Including Javascript File -->
@@ -39,11 +38,11 @@
         <section class="checkout-form">
             <h1>Checkout</h1>
             <form>
-                <p>Personal Information: </p>
+                <h3>Personal Information: </h3>
                 <div class="form personal-details">
                     <div class="grouping">
-                        <input type="text" name="firstName" id="firstName">
-                        <input type="text" name="lastName" id="lastName">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
                     </div>
                     <div class="grouping">
                         <input type="number" name="phoneno" id="phoneno">
@@ -54,22 +53,24 @@
                     <input type="email" name="emailId" id="emailId" placeholder="Email Id" required>
                 </div>
                 <hr>
-                <p>Address: </p>
+                <h3>Address: </h3>
                 <div class="form address-details">
                     <input type="text" placeholder="House no. / Building Name" required>
                     <input type="text" placeholder="Road Name / Area / Colony" required>
-                    <input type="text" placeholder="Pincode" required>
-                    <input type="text" placeholder="City" required>
-                    <input type="text" placeholder="State" required>
-                    <input type="text" placeholder="Nearby Location (optional)" required>
+                    <div class="grouping">
+                        <input type="text" placeholder="Pincode" required>
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="State" required>
+                    </div>
+                    <input type="text" placeholder="Nearby Location (optional)">
                 </div>
                 <hr>
-                <p>Mode of Payment: </p>
+                <h3>Mode of Payment: </h3>
                 <div class="form payment-details">
                     <input type="text" placeholder="Mode of Payment" required>
                 </div>
                 <div class="form">
-                    <button type="submit">Submit</button>
+                    <button class="submit-button" type="submit">Submit</button>
                 </div>
             </form>
         </section>
