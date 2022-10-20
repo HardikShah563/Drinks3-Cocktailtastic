@@ -1,16 +1,16 @@
-var removeFromcart = document.querySelectorAll(".remove-from-cart");
-var removeFromCartOverlay = document.querySelector(".remove-from-cart-overlay");
-function removeFromCartClick() {
+var addTocart = document.querySelectorAll(".remove-from-cart");
+var addTocartOverlay = document.querySelector(".remove-from-cart-overlay");
+function addToCartClick() {
     addTocart.forEach(addtocart => {
         addtocart.addEventListener("click", () => {
-            removeFromCartClick.classList.add("show");
+            addTocartOverlay.classList.add("show");
             setTimeout(fadeOut, 3000);
         });
     });
 }
 
 function fadeOut() {
-    removeFromCartOverlay.classList.remove("show");
+    addTocartOverlay.classList.remove("show");
 }
 
 setInterval(addToCartClick(), 1);

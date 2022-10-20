@@ -2,7 +2,7 @@
 .drinks-container h1 {
     font-size: 5vw;
     text-align: center;
-    margin: 50px 0;
+    margin: 100px 0;
     text-shadow: 2px 2px 2px var(--white);
 }
 
@@ -73,22 +73,6 @@
     border-radius: 5px;
 }
 
-.add-to-cart-overlay {
-    position: fixed;
-    top: 100px;
-    right: -300px;
-    padding: 10px;
-    border: 1px dashed var(--black);
-    border-right: none;
-    background-color: var(--dark-lavender);
-    border-radius: 4px;
-    transition-duration: 300ms;
-}
-
-.add-to-cart-overlay.show {
-    right: 0px;
-}
-
 /* -------- Go To Cart Button CSS -------- */
 .checkout-section {
     display: flex;
@@ -109,6 +93,30 @@
 
 .checkout-section a:hover {
     background-color: var(--dark-lavender);
+}
+
+/* -------- Remove from Cart Overlay */
+
+.remove-from-cart-overlay {
+    position: fixed;
+    opacity: 0;
+    left: -100px;
+    bottom: 100px;
+    width: 300px;
+    margin: auto auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--black);
+    border-right: none;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+.remove-from-cart-overlay.show {
+    left: 50px;
+    opacity: 1;
 }
 
 @media (max-width: 500px) {

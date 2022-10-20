@@ -155,20 +155,27 @@ body {
     border-radius: 5px;
 }
 
+/* -------- Add to Cart Overlay */
 .add-to-cart-overlay {
     position: fixed;
-    top: 100px;
-    right: -300px;
+    opacity: 0;
+    left: -100px;
+    bottom: 100px;
+    width: 300px;
+    margin: auto auto;
+    text-align: center;
     padding: 10px;
-    border: 1px dashed var(--black);
+    border: 1px solid var(--black);
     border-right: none;
-    background-color: var(--dark-lavender);
+    background-color: var(--black);
+    color: var(--white);
     border-radius: 4px;
     transition-duration: 300ms;
 }
 
 .add-to-cart-overlay.show {
-    right: 0px;
+    left: 50px;
+    opacity: 1;
 }
 
 /* -------- Go To Cart Button CSS -------- */
@@ -192,3 +199,10 @@ body {
 .go-to-cart-section a:hover {
     background-color: var(--dark-lavender);
 }
+
+/* @media (max-width: 500px) {
+    .remove-from-cart-overlay.show {
+        left: 10px;
+        opacity: 1;
+    }
+} */
