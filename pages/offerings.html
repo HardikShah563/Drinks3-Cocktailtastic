@@ -9,6 +9,7 @@
     <!-- Including Style Sheet-->
     <link rel="stylesheet" href="./../style/navbar.css">
     <link rel="stylesheet" href="./../style/offerings.css">
+    <link rel="stylesheet" href="./../style/style.css">
     <!-- Including Icons -->
     <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
     <!-- Including Javascript File -->
@@ -27,29 +28,30 @@
                     <i class="fa-solid fa-bars-staggered"></i>
                 </div>
                 <div class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="./pages/offerings.html">Offerings</a></li>
+                    <li><a href="./../index.html#home">Home</a></li>
+                    <li><a href="./offerings.html">Offerings</a></li>
                     <li><a href="./../index.html#contact">Contact</a></li>
+                    <li><a href="./cart.html">Cart</a></li>
                     <li><a href="./login.html">Login</a></li>
                 </div>
             </nav>
         </section>
 
-        <section class="alcoholic drinks-container">
-            <h1>Non-Alcoholic Drinks</h1>
-            <div class="inter-drink-header">
+        <section class="alcoholic drinks-container" id="alcoholic">
+            <h1>Alcoholic Drinks</h1>
+            <div class="inter-drink-header" name="moctails">
                 <div class="line"></div>
                 <div class="inter-drink-header-text"><p>Mocktails</p></div>
                 <div class="line"></div>
             </div>
             <!-- --------- Moctail Drinks Section --------- -->
-            <div class="moctails inter-drink">
+            <div class="inter-drink" id="mocktails">
                 <div class="drink">
                     <div class="drink-img">
                         <img src="../img/moctail1.png" alt="Moctail1">
                     </div>
                     <div class="drink-text">
-                        <div class="drink-name">
+                        <div class="drink-name">-
                             <p>Moctail 1</p>
                         </div>
                         <div class="drink-cost">
@@ -126,13 +128,13 @@
             </div>
 
 
-            <div class="inter-drink-header">
+            <div class="inter-drink-header" id="tonics">
                 <div class="line"></div>
                 <div class="inter-drink-header-text"><p>Tonics</p></div>
                 <div class="line"></div>
             </div>
             <!-- --------- Tonic Drinks Section --------- -->
-            <div class="moctails inter-drink">
+            <div class="inter-drink">
                 <div class="drink">
                     <div class="drink-img">
                         <img src="../img/tonic1.png" alt="Moctail1">
@@ -199,13 +201,13 @@
             </div>
 
 
-            <div class="inter-drink-header">
+            <div class="inter-drink-header" id="beers">
                 <div class="line"></div>
                 <div class="inter-drink-header-text"><p>Beers</p></div>
                 <div class="line"></div>
             </div>
             <!-- --------- Beers Drinks Section --------- -->
-            <div class="moctails inter-drink">
+            <div class="inter-drink">
                 <div class="drink">
                     <div class="drink-img">
                         <img src="../img/beer1.png" alt="Moctail1">
@@ -241,13 +243,13 @@
             </div>
 
 
-            <div class="inter-drink-header">
+            <div class="inter-drink-header" id="ciders">
                 <div class="line"></div>
                 <div class="inter-drink-header-text"><p>Ciders</p></div>
                 <div class="line"></div>
             </div>
-            <!-- --------- Cider Drinks Section --------- -->
-            <div class="moctails inter-drink">
+            <!-- --------- Ciders Drinks Section --------- -->
+            <div class="inter-drink">
                 <div class="drink">
                     <div class="drink-img">
                         <img src="../img/cider1.png" alt="Moctail1">
@@ -312,22 +314,118 @@
                     </div>
                 </div>
             </div>
+            <!-- All Drinks Section Complete -->
+        </section>
+        
+        <!-- -------- Alcoholic Drinks Section Concludes here -->
 
+        <section class="non-alcoholic drinks-container" id="non-alcoholic">
 
-            <div class="inter-drink-header">
+            <h1>Non-Alcoholic Drinks</h1>
+
+            <div class="inter-drink-header" id="cocktails">
                 <div class="line"></div>
-                <div class="inter-drink-header-text"><p>Tonics</p></div>
+                <div class="inter-drink-header-text"><p>Cocktails</p></div>
                 <div class="line"></div>
             </div>
-            <!-- --------- Tonic Drinks Section --------- -->
-            <div class="moctails inter-drink">
+            <!-- --------- Cocktails Section --------- -->
+            <div class="inter-drink">
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/moctail1.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Moctail 1</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/moctail2.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Cocktails 2</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/moctail3.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Cocktails 3</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/moctail4.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Cocktails 4</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/moctail5.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Cocktails 5</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="inter-drink-header" id="energy-drinks">
+                <div class="line"></div>
+                <div class="inter-drink-header-text"><p>Energy Drinks</p></div>
+                <div class="line"></div>
+            </div>
+            <!-- --------- Energy Drinks Section --------- -->
+            <div class="inter-drink">
                 <div class="drink">
                     <div class="drink-img">
                         <img src="../img/tonic1.png" alt="Moctail1">
                     </div>
                     <div class="drink-text">
                         <div class="drink-name">
-                            <p>Tonic 1</p>
+                            <p>Energy Drinks 1</p>
                         </div>
                         <div class="drink-cost">
                             <p>€100</p>
@@ -343,7 +441,7 @@
                     </div>
                     <div class="drink-text">
                         <div class="drink-name">
-                            <p>Tonic 2</p>
+                            <p>Energy Drinks 2</p>
                         </div>
                         <div class="drink-cost">
                             <p>€100</p>
@@ -359,7 +457,7 @@
                     </div>
                     <div class="drink-text">
                         <div class="drink-name">
-                            <p>Tonic 3</p>
+                            <p>Energy Drinks 3</p>
                         </div>
                         <div class="drink-cost">
                             <p>€100</p>
@@ -375,7 +473,32 @@
                     </div>
                     <div class="drink-text">
                         <div class="drink-name">
-                            <p>Tonic 4</p>
+                            <p>Energy Drinks 4</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="inter-drink-header" id="shakes">
+                <div class="line"></div>
+                <div class="inter-drink-header-text"><p>Shakes</p></div>
+                <div class="line"></div>
+            </div>
+            <!-- --------- Shakes Drinks Section --------- -->
+            <div class="inter-drink">
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/beer1.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Shakes 1</p>
                         </div>
                         <div class="drink-cost">
                             <p>€100</p>
@@ -387,11 +510,84 @@
 
                 <div class="drink">
                     <div class="drink-img">
-                        <img src="../img/tonic3.png" alt="Moctail1">
+                        <img src="../img/beer2.png" alt="Moctail1">
                     </div>
                     <div class="drink-text">
                         <div class="drink-name">
-                            <p>Tonic 5</p>
+                            <p>Shakes 2</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="inter-drink-header" id="juices">
+                <div class="line"></div>
+                <div class="inter-drink-header-text"><p>Juices</p></div>
+                <div class="line"></div>
+            </div>
+            <!-- --------- Juices Drinks Section --------- -->
+            <div class="inter-drink">
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/cider1.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Juice 1</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/cider2.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Juice 2</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/cider3.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Juice 3</p>
+                        </div>
+                        <div class="drink-cost">
+                            <p>€100</p>
+                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="drink">
+                    <div class="drink-img">
+                        <img src="../img/cider4.png" alt="Moctail1">
+                    </div>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p>Juice 4</p>
                         </div>
                         <div class="drink-cost">
                             <p>€100</p>
@@ -404,7 +600,15 @@
             <!-- All Drinks Section Complete -->
         </section>
 
-        <section class="non-alcoholic drinks-container"></section>
+        <section class="go-to-cart-section">
+            <a href="./cart.html">Go to Cart</a>
+        </section>
+
+        <section class="footer">
+            <footer>
+                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
+            </footer>
+        </section>
 
         <div class="add-to-cart-overlay">
             <p>Product Added to Cart</p>

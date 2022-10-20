@@ -1,7 +1,6 @@
 var addTocart = document.querySelectorAll(".add-to-cart");
 var addTocartOverlay = document.querySelector(".add-to-cart-overlay");
 function addToCartClick() {
-    // addTocart.addEventListener("click", () => {});
     addTocart.forEach(addtocart => {
         addtocart.addEventListener("click", () => {
             addTocartOverlay.classList.add("show");
