@@ -60,6 +60,14 @@ body {
     margin: 5vh auto;
     border-radius: 60px;
     background-image: linear-gradient(45deg, #9471f1, #c8b3f6, #f5f1ff);
+    overflow-y: scroll;
+}
+
+hr {
+    width: 60vw;
+    margin: auto auto;
+    border: 0.5px solid var(--dark-lavender);
+    border-radius: 10px;
 }
 
 /* -------- Login Section CSS -------- */
@@ -118,6 +126,21 @@ form input {
     background-color: var(--dark-lavender);
 }
 
+/* -------- Footer Section CSS --------- */
+footer {
+    height: 100px;
+    text-align: center;
+}
+
+footer p {
+    margin: 20px;
+    font-weight: 500;
+}
+
+.copyright-icon {
+    font-size: 20px;
+}
+
 @media (max-width: 800px) {
     .login-register-box h1 {
         font-size: 7vw;
@@ -144,4 +167,24 @@ form input {
     .register-statement {
         font-size: 10px;
     }
+
+    footer {
+        font-size: 10px;
+    }
+
+    .copyright-icon {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--off-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 10px;
 }
