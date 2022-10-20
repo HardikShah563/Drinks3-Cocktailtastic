@@ -71,7 +71,6 @@ body {
     text-shadow: 2px 2px 2px var(--white);
 }
 
-/* -------- Drinks Container CSS -------- */
 .inter-drink-header {
     display: flex;
     justify-content: center;
@@ -86,4 +85,87 @@ body {
     height: 0px;
     margin: auto 20px;
     border-bottom: 1px solid var(--purple);
+}
+
+/* -------- Drinks Container CSS -------- */
+.inter-drink {
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.drink {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 180px;
+    padding: 5px;
+    margin: 10px 20px;
+    background-color: var(--dark-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.drink-img img {
+    width: 100px;
+    margin: auto auto;
+}
+
+.drink-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.drink-name {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 2px;
+    margin: 10px 8px;
+    background-color: #f0f0f0;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.drink-cost {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+.drink-cost input {
+    width: 50%;
+    height: 22px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.drink-text button {
+    height: 30px;
+    margin: 8px 8px 0 8px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.add-to-cart-overlay {
+    position: fixed;
+    top: 100px;
+    right: -300px;
+    padding: 10px;
+    border: 1px dashed var(--black);
+    border-right: none;
+    background-color: var(--dark-lavender);
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+.add-to-cart-overlay.show {
+    right: 0px;
 }
