@@ -66,7 +66,7 @@ body {
 hr {
     width: 60vw;
     margin: auto auto;
-    border: 1px solid var(--lavander);
+    border: 0.5px solid var(--dark-lavender);
     border-radius: 10px;
 }
 
@@ -474,7 +474,7 @@ nav {
 }
 
 .login-box hr {
-    border: 0.5px solid var(--dark-lavender);
+    
 }
 
 .login-box .login-register-box  h1 {
@@ -564,9 +564,356 @@ nav {
 /* ================ Offerings Page CSS ================= */
 
 
+/* -------- Drinks Section Title CSS -------- */
+.offerings-page .drinks-container h1 {
+    font-size: 5vw;
+    text-align: center;
+    margin: 50px 0;
+    text-shadow: 2px 2px 2px var(--white);
+}
+
+.offerings-page .inter-drink-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.offerings-page .inter-drink-header-text {
+    font-size: 24px;
+}
+
+.offerings-page .line {
+    width: 20vw;
+    height: 0px;
+    margin: auto 20px;
+    border-bottom: 1px solid var(--purple);
+}
+
+/* -------- Drinks Container CSS -------- */
+.offerings-page .inter-drink {
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offerings-page .drink {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 180px;
+    padding: 5px;
+    margin: 10px 20px;
+    background-color: var(--dark-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.offerings-page .drink-img img {
+    width: 100px;
+    margin: auto auto;
+}
+
+.offerings-page .drink-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.offerings-page .drink-name {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 2px;
+    margin: 10px 8px;
+    background-color: #f0f0f0;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.offerings-page .drink-cost {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+.offerings-page .drink-cost input {
+    width: 50%;
+    height: 22px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.offerings-page .drink-text button {
+    height: 30px;
+    margin: 8px 8px 0 8px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+/* -------- Add to Cart Overlay */
+.offerings-page .add-to-cart-overlay {
+    position: fixed;
+    opacity: 0;
+    left: -100px;
+    bottom: 100px;
+    width: 300px;
+    margin: auto auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--black);
+    border-right: none;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+.offerings-page .add-to-cart-overlay.show {
+    left: 50px;
+    opacity: 1;
+}
+
+/* -------- Go To Cart Button CSS -------- */
+.offerings-page .go-to-cart-section {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.offerings-page .go-to-cart-section a {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    box-shadow: 2px 2px 2px var(--white);
+    border-radius: 20px;
+    transition-duration: 200ms;
+}
+
+.offerings-page .go-to-cart-section a:hover {
+    background-color: var(--dark-lavender);
+}
+
+
+/* ================ Cart Page CSS ================= */
+
+/* -------- Drinks Container CSS -------- */
+.cart-page .drinks-container h1 {
+    font-size: 5vw;
+    text-align: center;
+    margin: 100px 0;
+    text-shadow: 2px 2px 2px var(--white);
+}
+
+.cart-page .inter-drink {
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart-page .drink {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 180px;
+    padding: 5px;
+    margin: 10px 20px;
+    background-color: var(--dark-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.cart-page .drink-img img {
+    width: 100px;
+    height: 160px;
+    margin: auto auto;
+}
+
+.cart-page .drink-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cart-page .drink-name {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 2px;
+    margin: 10px 8px;
+    background-color: #f0f0f0;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.cart-page .drink-cost {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+.cart-page .drink-cost input {
+    width: 50%;
+    height: 22px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+.cart-page .drink-text button {
+    height: 30px;
+    margin: 8px 8px 0 8px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+/* -------- Go To Cart Button CSS -------- */
+.cart-page .checkout-section {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.cart-page .checkout-section a {
+    padding: 10px 40px;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    box-shadow: 2px 2px 2px var(--white);
+    border-radius: 20px;
+    transition-duration: 200ms;
+}
+
+.cart-page .checkout-section a:hover {
+    background-color: var(--dark-lavender);
+}
+
+/* -------- Remove from Cart Overlay */
+
+.cart-page .remove-from-cart-overlay {
+    position: fixed;
+    opacity: 0;
+    left: -100px;
+    bottom: 100px;
+    width: 300px;
+    margin: auto auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--black);
+    border-right: none;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 4px;
+    transition-duration: 300ms;
+}
+
+.cart-page .remove-from-cart-overlay.show {
+    left: 50px;
+    opacity: 1;
+}
+
+@media (max-width: 500px) {
+    .cart-page .checkout-section a {
+        padding: 10px 20px;
+    }
+
+    .cart-page .checkout-section a {
+        font-size: 12px;
+    }
+}
+
 
 /* ================ Checkout Page CSS ================= */
 
 
+.checkout-page .checkout-form {
+    margin: 50px 0;
+}
 
-/* ================ Cart Page CSS ================= */
+.checkout-page .checkout-form h1 {
+    text-align: center;
+    font-size: 5vw;
+    text-shadow: 2px 2px 2px var(--white);
+    margin: 30px 0;
+}
+
+.checkout-page form {
+    width: 60vw;
+    margin: 15px auto;
+    display: block;
+}
+
+.checkout-page input {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px;
+    display: block;
+    background-color: var(--light-lavender);
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+}
+
+.checkout-page .grouping {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-page form h3 {
+    margin: 20px 0;
+}
+
+::placeholder {
+    color: var(--black);
+}
+
+.checkout-page .submit-button {
+    width: 60%;
+    margin: 20px auto;
+    height: 40px;
+    box-shadow: 2px 2px 2px var(--white);
+    color: var(--light-lavender);
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    transition-duration: 200ms;
+}
+
+.checkout-page .submit-button:hover {
+    background-color: var(--dark-lavender);
+}
+
+@media (max-width: 600px) {
+    .checkout-page form p {
+        font-size: 14px;
+    }
+
+    .checkout-page form {
+        width: 90vw;
+    }
+
+    .checkout-page input {
+        width: 95%;
+    }
+
+    .checkout-page .grouping {
+        flex-wrap: wrap;
+    }
+
+    .checkout-page .submit-button {
+        width: 80%;
+    }
+}
