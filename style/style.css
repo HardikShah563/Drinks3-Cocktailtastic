@@ -229,14 +229,12 @@ form input {
     height: 35px;
     margin: 20px 0 0 0;
     box-shadow: 2px 2px 2px var(--white);
+    font-size: 18px;
+    color: var(--light-lavender);
     background-color: var(--purple);
     border: 1px solid var(--purple);
     border-radius: 5px;
     transition-duration: 200ms;
-}
-
-.submit-button a {
-    color: var(--light-lavender);
 }
 
 .submit-button:hover {
@@ -572,23 +570,6 @@ nav {
     text-shadow: 2px 2px 2px var(--white);
 }
 
-.offerings-page .inter-drink-header {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.offerings-page .inter-drink-header-text {
-    font-size: 24px;
-}
-
-.offerings-page .line {
-    width: 20vw;
-    height: 0px;
-    margin: auto 20px;
-    border-bottom: 1px solid var(--purple);
-}
-
 /* -------- Drinks Container CSS -------- */
 .offerings-page .inter-drink {
     width: 80vw;
@@ -613,7 +594,7 @@ nav {
 }
 
 .offerings-page .drink-img img {
-    width: 100px;
+    width: 120px;
     margin: auto auto;
 }
 
@@ -916,4 +897,37 @@ nav {
     .checkout-page .submit-button {
         width: 80%;
     }
+}
+
+/* ================ Add-to-cart Page CSS ================= */
+.message-box {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    background-color: #ff7d7d;
+    border: 1px solid var(--black);
+}
+
+.success {
+    background-color: #a1ff8c;
+    border: 1px solid var(--black);
+}
+
+.message-announcement {
+    text-align: center;
+    margin: 200px auto;
+    font-size: 48px;
+}
+
+
+/* ================ My Account Page CSS ================= */
+.grouping {
+    display: flex;
+    gap: 15px;
 }
