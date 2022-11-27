@@ -1,6 +1,6 @@
 <?php
 
-$dbname = 'drinksify';
+$dbname = 'cocktailtastic';
 $dbuser = 'root';
 $dbpass = '';
 $dbhost = 'localhost';

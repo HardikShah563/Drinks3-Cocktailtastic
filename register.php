@@ -1,17 +1,49 @@
 <?php include 'functions.php' ?>
 
+<?php
+
+if (isset($_POST['register'])) {
+    $data = $_POST;
+    $user_exists = email_exists($data['email']);
+    if ($user_exists) {
+        $response = [
+            'type' => 'error',
+            'message' => 'Email is Already Taken!',
+            'icon' => '<i class="fa-solid fa-circle-xmark"></i>',
+        ];
+    } else {
+    if ($data["password"] == $data["cpassword"]) {
+        $data["type"] = 'user';
+        $user = signup($data);
+        if ($user) {
+            $response = [
+                'type' => 'success',
+                'message' => 'User Registered Successfully!',
+                'icon' => '<i class="fa-solid fa-circle-check"></i>',
+            ];
+        } else {
+            $response = [
+                'type' => 'error',
+                'message' => 'Some Error Occured!',
+                'icon' => '<i class="fa-solid fa-circle-xmark"></i>',
+            ];
+        }
+        } else {
+            $response = [
+                'type' => 'error',
+                'message' => 'Passwords should match!',
+                'icon' => '<i class="fa-solid fa-circle-xmark"></i>',
+            ];
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Including Style Sheet-->
-    <link rel="stylesheet" href="../style/style.css">
-    <!-- Including Icons -->
-    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
-    <!-- Including Javascript File -->
-    <script src="./../script/app.js" defer></script>
+    <?php include 'header.php' ?>
     <title>Register | Cocktailtastic</title>
 </head>
 <body>
@@ -21,27 +53,31 @@
         <section class="login-register-box">
             <h1>Register new account</h1>
             <form action="?" method="post">
-                <div class="message-box success error">
-                    <div class="icon">
-                        <!-- icon -->
+
+                <!-- Message response box -->
+                <?php if (isset($response)) { ?>
+                    <div class="message-box <?= $response['type'] ?>">
+                        <div class="icon">
+                            <?= $response['icon'] ?>
+                        </div>
+                        <div class="message">
+                            <?= $response['message'] ?>
+                        </div>
                     </div>
-                    <div class="message">
-                        <!-- message -->
-                    </div>
-                </div>
-                <p>Name: </p>
-                <input type="text" name="name" id="name" required>
-                <p>Contact Number: </p>
-                <input type="text" name="phone-num" id="phone-num" required>
-                <p>Email Address/Username: </p>
-                <input type="email" name="email" id="email" required>
+                <?php } ?>
+                <p>First Name: </p>
+                <input type="text" name="fname" required>
+                <p>Last Name: </p>
+                <input type="text" name="lname" required>
+                <p>Email Address: </p>
+                <input type="email" name="email" required>
                 <p>Create Password: </p>
                 <input type="password" name="password" id="password" required>
                 <p>Retype Password: </p>
-                <input type="password" name="password" id="password" required>
-                <button class="submit-button" type="submit">Register</button>
+                <input type="password" name="cpassword" required>
+                <button class="submit-button" type="submit" name="register">Register</button>
             </form>
-            <p class="register-statement">Already have an account?&nbsp;<a href="./login.html">Sign into your account</a></p>
+            <p class="register-statement">Already have an account?&nbsp;<a href="login.php">Sign into your account</a></p>
         </section>
         
         <?php include 'footer.php' ?>
