@@ -1,0 +1,64 @@
+<?php include 'functions.php' ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Including Style Sheet-->
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- Including Icons -->
+    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
+    <!-- Including Javascript File -->
+    <script src="./script/app.js" defer></script>
+    <title>My Account | Cocktailtastic</title>
+</head>
+
+<body>
+    <div class="box">
+        <section class="nav">
+            <nav>
+                <div class="logo">
+                    <p>Cocktail<label class="purple">tastic</label></p>
+                </div>
+                <div class="nav-lines">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./offerings.html">Offerings</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </div>
+            </nav>
+        </section>
+
+        <section class="contact" id="contact" name="contact">
+            <h1>My Account</h1>
+            <div class="contact-form">
+                <form>
+                    <p>Name: </p>
+                    <input type="text" name="name" id="name" required>
+                    <p>Email Id: </p>
+                    <input type="email" name="email" id="email" required>
+                    <div class="grouping">
+                        <button class="submit-button" type="submit">Edit Details</button>
+                        <button class="submit-button" type="submit">Delete Account</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="footer">
+            <footer>
+                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html> 

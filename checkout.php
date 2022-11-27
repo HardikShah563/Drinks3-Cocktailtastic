@@ -1,0 +1,86 @@
+<?php include 'functions.php' ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Including Style Sheet-->
+    <link rel="stylesheet" href="./../style/style.css" />
+    <!-- Including Icons -->
+    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
+    <!-- Including Javascript File -->
+    <script src="./../script/app.js" defer></script>
+    <title>Checkout | Cocktailtastic</title>
+</head>
+
+<body>
+    <div class="box checkout-page">
+        <section class="nav">
+            <nav>
+                <div class="logo">
+                    <p>Cocktail<label class="purple">tastic</label></p>
+                </div>
+                <div class="nav-lines">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./offerings.html">Offerings</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./cart.html">Cart</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </div>
+            </nav>
+        </section>
+
+        <section class="checkout-form">
+            <h1>Checkout</h1>
+            <form>
+                <h3>Personal Information: </h3>
+                <div class="form personal-details">
+                    <div class="grouping">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="grouping">
+                        <input type="number" name="phoneno" id="phoneno" placeholder="Phone Number">
+                        <input type="email" name="emailId" id="emailId" placeholder="Email Address">
+                    </div>
+                </div>
+                <hr>
+                <h3>Address: </h3>
+                <div class="form address-details">
+                    <input type="text" placeholder="House no. / Building Name" required>
+                    <input type="text" placeholder="Road Name / Area / Colony" required>
+                    <div class="grouping">
+                        <input type="text" placeholder="Pincode" required>
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="State" required>
+                    </div>
+                    <input type="text" placeholder="Nearby Location (optional)">
+                </div>
+                <hr>
+                <h3>Mode of Payment: </h3>
+                <div class="form payment-details">
+                    <input type="text" placeholder="Mode of Payment" required>
+                </div>
+                <div class="form">
+                    <button class="submit-button" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="footer">
+            <footer>
+                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
