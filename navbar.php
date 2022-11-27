@@ -16,11 +16,11 @@
                     <li><a href="admin.php">Admin</a></li>
                 <?php } ?>
 
-                <li><a href="myaccount.php">My Account</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="myaccount.php"><i class="fa-solid fa-user-check"></i></a></li>
+                <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
 
             <?php } else { ?>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="login.php"><i class="fa-regular fa-right-to-bracket"></i></a></li>
             <?php } ?>
         </div>
     </nav>

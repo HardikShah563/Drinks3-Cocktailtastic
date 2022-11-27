@@ -1,5 +1,14 @@
 <?php include 'functions.php' ?>
 
+<?php
+
+$cart = get_cart();
+if (isset($cart)) {
+  $drinks = get_drinks_by_ids($cart);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,90 +21,32 @@
     <div class="box cart-page">
         <?php include 'navbar.php' ?>
 
-        <section class="drinks-container">
+        <section class="alcoholic drinks-container" id="alcoholic">
             <h1>Cart</h1>
-            <!-- --------- Moctail Drinks Section --------- -->
-            <div class="inter-drink" id="mocktails">
-                <div class="drink">
-                    <div class="drink-img">
-                        <img src="../img/moctail1.png" alt="Moctail1">
-                    </div>
-                    <div class="drink-text">
-                        <div class="drink-name">
-                            <p>Moctail 1</p>
+        <div class="inter-drink">
+            <?php if (mysqli_num_rows($drinks)) { ?>
+                <?php foreach ($drinks as $drink) { ?>
+                    <div class="drink">
+                        <div class="drink-img">
+                            <img src="img/<?= $drink['image'] ?>" alt="drink-image">
                         </div>
-                        <div class="drink-cost">
-                            <p>€100</p>
-                            <input type="number" name="quantity" id="quantity" placeholder="1">
+                        <div class="drink-text">
+                            <div class="drink-name">
+                                <p><?= $drink['name'] ?></p>
+                            </div>
+                            <form action="add-to-cart.php" method="post">
+                                <div class="drink-cost">
+                                    <p>£<?= $drink['price'] ?></p>
+                                    <input type="hidden" name="d_id" value="<?= $drink['d_id'] ?>">
+                                    <input type="number" name="quantity" id="item-<?= $drink['d_id'] ?>" placeholder="1">
+                                </div>
+                                <button style="width: 90%;" class="add-to-cart">Add to Cart</button>
+                            </form>
                         </div>
-                        <button class="remove-from-cart">Remove to Cart</button>
                     </div>
-                </div>
-
-                <div class="drink">
-                    <div class="drink-img">
-                        <img src="../img/tonic2.png" alt="Moctail1">
-                    </div>
-                    <div class="drink-text">
-                        <div class="drink-name">
-                            <p>Tonic 2</p>
-                        </div>
-                        <div class="drink-cost">
-                            <p>€100</p>
-                            <input type="number" name="quantity" id="quantity" placeholder="1">
-                        </div>
-                        <button class="remove-from-cart">Remove to Cart</button>
-                    </div>
-                </div>
-
-                <div class="drink">
-                    <div class="drink-img">
-                        <img src="../img/beer1.png" alt="Moctail1">
-                    </div>
-                    <div class="drink-text">
-                        <div class="drink-name">
-                            <p>Beer 3</p>
-                        </div>
-                        <div class="drink-cost">
-                            <p>€100</p>
-                            <input type="number" name="quantity" id="quantity" placeholder="1">
-                        </div>
-                        <button class="remove-from-cart">Remove to Cart</button>
-                    </div>
-                </div>
-
-                <div class="drink">
-                    <div class="drink-img">
-                        <img src="../img/moctail4.png" alt="Moctail1">
-                    </div>
-                    <div class="drink-text">
-                        <div class="drink-name">
-                            <p>Moctail 4</p>
-                        </div>
-                        <div class="drink-cost">
-                            <p>€100</p>
-                            <input type="number" name="quantity" id="quantity" placeholder="1">
-                        </div>
-                        <button class="remove-from-cart">Remove to Cart</button>
-                    </div>
-                </div>
-
-                <div class="drink">
-                    <div class="drink-img">
-                        <img src="../img/cider2.png" alt="Moctail1">
-                    </div>
-                    <div class="drink-text">
-                        <div class="drink-name">
-                            <p>Cider 5</p>
-                        </div>
-                        <div class="drink-cost">
-                            <p>€100</p>
-                            <input type="number" name="quantity" id="quantity" placeholder="1">
-                        </div>
-                        <button class="remove-from-cart">Remove to Cart</button>
-                    </div>
-                </div>
-            </div>
+                <?php } ?>
+            <?php } ?>
+        </div>
         </section>
 
         <section class="checkout-section">
