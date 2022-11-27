@@ -4,37 +4,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Including Style Sheet-->
-    <link rel="stylesheet" href="./../style/style.css" />
-    <!-- Including Icons -->
-    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
-    <!-- Including Javascript File -->
-    <script src="./../script/app.js" defer></script>
+    <?php include 'header.php' ?>
     <title>Cart | Cocktailtastic</title>
 </head>
 
 <body>
     <div class="box cart-page">
-        <section class="nav">
-            <nav>
-                <div class="logo">
-                    <p>Cocktail<label class="purple">tastic</label></p>
-                </div>
-                <div class="nav-lines">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </div>
-                <div class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./offerings.html">Offerings</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./cart.html">Cart</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                </div>
-            </nav>
-        </section>
+        <?php include 'navbar.php' ?>
 
         <section class="drinks-container">
             <h1>Cart</h1>
@@ -128,11 +104,7 @@
 
         <hr>
 
-        <section class="footer">
-            <footer>
-                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
-            </footer>
-        </section>
+        <?php include 'footer.php' ?>
     </div>
 </body>
 

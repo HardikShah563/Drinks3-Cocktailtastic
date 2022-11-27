@@ -4,37 +4,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Cocktailtastic</title>
-    <!-- Including Style Sheet-->
-    <link rel="stylesheet" href="./style/style.css">
-    <!-- Including Icons -->
-    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
-    <!-- Including Javascript File -->
-    <script src="./script/app.js" defer></script>
+    <?php include 'header.php' ?>
 </head>
 
 <body>
     <div class="box">
-        <section class="nav">
-            <nav>
-                <div class="logo">
-                    <p>Cocktail<label class="purple">tastic</label></p>
-                </div>
-                <div class="nav-lines">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </div>
-                <div class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="./pages/offerings.html">Offerings</a></li>
-                    <li><a href="./pages/contact.html">Contact</a></li>
-                    <li><a href="./pages/login.html">Login</a></li>
-                    <li><a href="./pages/myaccount.html">My Account</a></li>
-                </div>
-            </nav>
-        </section>
+        <?php include 'navbar.php' ?>
 
         <section class="main" id="home">
             <div class="main-text">
@@ -74,11 +49,7 @@
 
         <hr>
 
-        <section class="footer">
-            <footer>
-                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
-            </footer>
-        </section>
+        <?php include 'footer.php' ?>
     </div>
 </body>
 

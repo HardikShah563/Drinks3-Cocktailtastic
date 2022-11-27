@@ -1,46 +1,77 @@
 <?php include 'functions.php' ?>
 
+<?php
+
+if (isset($_POST['add-to-cart'])) {
+    $data = $_POST;
+    $id = $_POST["d_id"];
+    $quantity = $_POST['quantity'];
+    if (add_to_cart($id, $quantity)) {
+        $response = [
+            'type' => 'success',
+            'message' => 'Drink is added to cart successfully!',
+            'icon' => '<i class="fa-regular fa-circle-check"></i>',
+        ];
+    } else {
+        $response = [
+            'type' => 'success',
+            'message' => 'Some Error Occured, Please try again!',
+            'icon' => '<i class="fa-regular fa-circle-xmark"></i>',
+        ];
+    }
+} else if (isset($_POST['update-to-cart'])) {
+    $data = $_POST;
+    $id = $_POST["d_id"];
+    $quantity = $_POST['quantity'];
+    if (update_to_cart($id, $quantity)) {
+        $response = [
+            'type' => 'success',
+            'message' => 'Drink is added to cart successfully!',
+            'icon' => '<i class="fa-regular fa-circle-check"></i>',
+        ];
+    } else {
+        $response = [
+            'type' => 'success',
+            'message' => 'Some Error Occured, Please try again!',
+            'icon' => '<i class="fa-regular fa-circle-xmark"></i>',
+        ];
+    }
+} else if (isset($_POST['remove-from-cart'])) {
+    $id = $_POST["d_id"];
+    if (remove_from_cart($id)) {
+        $response = [
+          'type' => 'success',
+          'message' => 'Drink is removed from cart',
+          'icon' => '<i class="fa-regular fa-circle-check"></i>',
+        ];
+      } else {
+        $response = [
+          'type' => 'error',
+          'message' => 'Some Error Occured, Please try again!',
+          'icon' => '<i class="fa-regular fa-circle-xmark"></i>',
+        ];
+      }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Including Style Sheet-->
-    <link rel="stylesheet" href="../style/style.css">
-    <!-- Including Icons -->
-    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
-    <!-- Including Javascript File -->
-    <script src="./../script/app.js" defer></script>
+    <?php include 'header.php' ?>
     <title>Popup | Cocktailtastic</title>
 </head>
 <body>
     <div class="box login-box">
-        <section class="nav">
-            <nav>
-                <div class="logo">
-                    <p>Cocktail<label class="purple">tastic</label></p>
-                </div>
-                <div class="nav-lines">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </div>
-                <div class="nav-links">
-                    <div class="nav-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./offerings.html">Offerings</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </div>
-                </div>
-            </nav>
-        </section>
+        <?php include 'navbar.php' ?>
 
         <section class="login-register-box">
             <div class="message-announcement">
                 <div class="icon">
-                    <>
+                    <?= $response['icon'] ?>
                 </div>
                 <div class="message">
-                    message
+                    <?= $response['message'] ?>
                 </div>
             </div>
             <form action="?" method="post">
@@ -51,11 +82,7 @@
 
         <hr>
 
-        <section class="footer">
-            <footer>
-                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
-            </footer>
-        </section>
+        <?php include 'footer.php' ?>
     </div>
 </body>
 </html>

@@ -16,23 +16,7 @@
 </head>
 <body>
     <div class="box login-box">
-        <section class="nav">
-            <nav>
-                <div class="logo">
-                    <p>Cocktail<label class="purple">tastic</label></p>
-                </div>
-                <div class="nav-lines">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </div>
-                <div class="nav-links">
-                    <div class="nav-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./offerings.html">Offerings</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </div>
-                </div>
-            </nav>
-        </section>
+        <?php include 'navbar.php' ?>
 
         <section class="login-register-box">
             <h1>Register new account</h1>
@@ -59,14 +43,8 @@
             </form>
             <p class="register-statement">Already have an account?&nbsp;<a href="./login.html">Sign into your account</a></p>
         </section>
-
-        <hr>
-
-        <section class="footer">
-            <footer>
-                <p>All <label class="copyright-icon">&copy;</label>Copyyrights reserved | Cocktailtastic</p>
-            </footer>
-        </section>
+        
+        <?php include 'footer.php' ?>
     </div>
 </body>
 </html>
