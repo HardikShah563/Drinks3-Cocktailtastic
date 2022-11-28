@@ -4,9 +4,9 @@
 
 $drinks = get_drinks();
 
-if (isset($_POST['add-to-cart'])) {
-    header("Location: add-to-cart.php");
-}
+// if (isset($_POST['add-to-cart'])) {
+//     header("Location: add-to-cart.php");
+// }
 
 ?>
 
@@ -25,26 +25,36 @@ if (isset($_POST['add-to-cart'])) {
         <section class="alcoholic drinks-container" id="alcoholic">
             <h1>Find Your Taste</h1>
 
-            <div class="inter-drink">
-                <?php if (mysqli_num_rows($drinks)) { ?>
-                    <?php foreach ($drinks as $drink) { ?>
-                        <div class="drink">
-                            <div class="drink-img">
-                                <img src="img/<?= $drink['image'] ?>" alt="drink-image">
-                            </div>
-                            <div class="drink-text">
-                                <div class="drink-name">
-                                    <p><?= $drink['name'] ?></p>
-                                </div>
-                                <div class="drink-cost">
-                                    <p>£<?= $drink['price'] ?></p>
-                                    <input type="number" name="quantity" id="quantity" placeholder="1">
-                                </div>
-                            </div>
+            <?php if (mysqli_num_rows($drinks)) { ?>
+                <div class="inter-drink">
+                <?php foreach ($drinks as $drink) { ?>
+                    <div class="drink">
+                        <div class="drink-img">
+                            <img src="img/<?= $drink['image'] ?>" alt="" />
                         </div>
-                    <?php } ?>
+                    <div class="drink-text">
+                        <div class="drink-name">
+                            <p><?= $drink['name'] ?></p>
+                        </div>
+                        <div class="drink-cost">
+                            
+                        </div>
+                        
+                        <div class="add-to-basket">
+                        <form id="add-to-cart-form" action="add-to-cart.php" method="POST">
+                            <div class="drink-cost">
+                                <p class="price">£<?= $drink['price'] ?></p>
+                                <input style="width: 60%; margin: auto auto; padding: 8px;" type="number" name="quantity" id="item-<?= $drink['d_id'] ?>" min="1" placeholder="1">
+                            </div>
+                            <input type="hidden" name="d_id" value="<?= $drink['d_id'] ?>">
+                            <button style="width: 90%;" type="submit" name="add-to-cart" class="add-to-cart">Add To Cart</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
                 <?php } ?>
-            </div>
+                </div>
+            <?php } ?>
         </section>
 
         <section class="go-to-cart-section">

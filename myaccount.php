@@ -17,12 +17,12 @@
             <div class="contact-form">
                 <form>
                     <p>Name: </p>
-                    <input type="text" name="name" id="name" required>
+                    <input style="padding: 8px;" readonly type="text" name="name" required value="<?= $_SESSION["fname"]; ?> <?= $_SESSION["lname"]; ?>">
                     <p>Email Id: </p>
-                    <input type="email" name="email" id="email" required>
+                    <input style="padding: 8px;" readonly type="email" name="email" required value="<?= $_SESSION["email"] ?>">
                     <div class="grouping">
                         <button class="submit-button" type="submit">Edit Details</button>
-                        <button class="submit-button" type="submit">Delete Account</button>
+                        <button href="delete-user.php" class="submit-button">Delete</button>
                     </div>
                 </form>
             </div>

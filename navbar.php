@@ -20,7 +20,7 @@
                 <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
 
             <?php } else { ?>
-                <li><a href="login.php"><i class="fa-regular fa-right-to-bracket"></i></a></li>
+                <li><a href="login.php"><i class="fa-solid fa-user"></i></a></li>
             <?php } ?>
         </div>
     </nav>

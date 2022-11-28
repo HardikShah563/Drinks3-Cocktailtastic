@@ -14,16 +14,13 @@
 
         <?php
 
-        $response = [
-            'type' => null,
-            'message' => null,
-            'icon' => null
-        ];
-
         if (isset($_POST['add-to-cart'])) {
             $data = $_POST;
             $id = $_POST["d_id"];
-            $quantity = $_POST['quantity'];
+            $quantity = (int)($_POST['quantity']);
+            if($quantity == 0) {
+                $quantity += 1;
+            }
             if (add_to_cart($id, $quantity)) {
                 $response = [
                     'type' => 'success',
@@ -80,12 +77,11 @@
             </div>
             
             <form action="?" method="post">
-                <button class="submit-button" type="submit">Continue Shopping</button>
+                <a style="text-align: center; padding-top: 5px;" class="submit-button" href="offerings.php">Continue Shopping</a>
             </form>
-            <p class="register-statement">Don't have an account?&nbsp;<a href="./register.html">Create New Account here</a></p>
         </section>
 
-        <hr>
+        <br><br>
 
         <?php include 'footer.php' ?>
     </div>
