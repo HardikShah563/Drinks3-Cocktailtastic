@@ -1,5 +1,35 @@
 <?php include 'functions.php' ?>
 
+<?php 
+
+if (isset($_POST['logout'])) {
+    header("Location: logout.php");
+}
+
+if (isset($_POST['deleteAccount'])) {
+    delete_user($_SESSION["u_id"]);
+    header("Location: logout.php");
+}
+if (isset($_POST['updateAccount'])) {
+    header("Location: editdetails.php");
+}
+
+// $user = get_user($_SESSION["u_id"]);
+
+// global $db;
+//     $sql = "select * from drinks";
+//     $stmt = $db->prepare($sql);
+//     $stmt->execute();
+//     $result = $stmt->get_result();
+//     return $result;
+
+$user = [];
+$user["fname"] = $_SESSION["fname"];
+$user["lname"] = $_SESSION["lname"];
+$user["email"] = $_SESSION["email"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,29 +39,32 @@
 </head>
 
 <body>
-    <div class="box">
+    <div class="box login-page">
         <?php include 'navbar.php' ?>
 
-        <section class="contact" id="contact" name="contact">
+        <section class="contact" name="contact">
             <h1>My Account</h1>
-            <div class="contact-form">
-                <form>
-                    <p>Name: </p>
-                    <input style="padding: 8px;" readonly type="text" name="name" required value="<?= $_SESSION["fname"]; ?> <?= $_SESSION["lname"]; ?>">
-                    <p>Email Id: </p>
-                    <input style="padding: 8px;" readonly type="email" name="email" required value="<?= $_SESSION["email"] ?>">
-                    <div class="grouping">
-                        <button class="submit-button" type="submit">Edit Details</button>
-                        <button href="delete-user.php" class="submit-button">Delete</button>
+                <div class="contact-form">
+                    <div class="user-details" style="margin: 60px auto;">
+                        <p style="text-align: left;">Name: <?= $user["fname"]; $user["lname"]; ?></p>
+                        <p style="text-align: left;">Email Address: <?= $user["email"] ?></p>
                     </div>
-                </form>
-            </div>
-        </section>
-
-        <hr>
+                </div>
+                <div class="user-buttons" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                        <form action="?" method="post">
+                                <button type="submit" name="updateAccount" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px;">Edit Details &nbsp;<i class="fa-solid fa-pen-to-square"></i></button>
+                            </form>
+                        <form action="?" method="post">
+                            <button type="submit" name="deleteAccount" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px;">Delete Account &nbsp;<i class="fa-solid fa-user-slash"></i></button>
+                        </form>
+                        <form action="?" method="post">
+                            <button type="submit" name="logout" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px;">Log Out &nbsp; <i class="fa-solid fa-arrow-right-from-bracket"></i> </button>
+                        </form>
+                    </div>
+            </section>
 
         <?php include 'footer.php' ?>
     </div>
 </body>
 
-</html> 
+</html>

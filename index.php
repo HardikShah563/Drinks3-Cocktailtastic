@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+    <title>Cocktailtastic</title>
     <?php include 'header.php' ?>
 </head>
 
@@ -11,7 +12,7 @@
     <div class="box">
         <?php include 'navbar.php' ?>
 
-        <section class="main" id="home">
+        <section class="main">
             <div class="main-text">
                 <h1>Cocktail<label class="purple">tastic</label></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum veniam ipsam nostrum minima

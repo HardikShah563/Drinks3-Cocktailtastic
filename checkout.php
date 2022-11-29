@@ -27,7 +27,7 @@ if (isset($_POST['checkout'])) {
             empty_cart();
         }
     } else {
-        header('Location: ./offerings.php');
+        header('Location: offerings.php');
     }
 }
 
