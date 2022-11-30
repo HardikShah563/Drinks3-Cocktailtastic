@@ -2,7 +2,7 @@
 
 <?php 
 
-if (isset($_POST['editDetails'])) {
+if (isset($_POST['edit'])) {
     $editDetails = $_POST;
 
     $editDetails['fname'] = $_POST["fname"];
@@ -34,12 +34,6 @@ if (isset($_POST['editDetails'])) {
     <title>My Account-Edit | Cocktailtastic</title>
 </head>
 
-<style>
-    .padding {
-        padding: 8px;
-    }
-</style>
-
 <body>
     <div class="box login-page">
         <?php include 'navbar.php' ?>
@@ -55,23 +49,14 @@ if (isset($_POST['editDetails'])) {
                     </div>
                 <?php } ?>
 
-                <form action="?" method="post">
-                    <p style="font-size: 12px; text-align: center; margin: 20px;">Note: If you do not wish to change any particular field, you must fill it with the existing information</p>
-                    <h1>Personal Details</h1>
-                    <div class="grouping" style="margin: 10px auto">
-                        <input class="padding" type="text" name="fname" placeholder="First Name" required>
-                        <input class="padding" type="text" name="lname" placeholder="Last Name" required>
-                    </div>
-                    <br>
-                    <p style="font-size: 12px; text-align: center;">* This email will be used for all the communication</p>
-                    <input class="padding" type="email" name="email" placeholder="Email" required>
-                    <br>
-                    <h1>Change Password</h1>
-                    <div class="grouping" style="margin: 10px auto;">
-                        <input class="padding" type="password" name="password" placeholder="Old Password" required>
-                        <input class="padding" type="password" name="newpassword" placeholder="New password" required>
-                    </div>
-                    <button type="submit" name="editDetails" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px; margin: 20px auto;">Edit Details &nbsp;<i class="fa-solid fa-pen-to-square"></i></button>
+                <form action="?" method="post" class="checkout-form">
+                    <p>Note: If you do not wish to update any particular field, type the original ones</p>
+                    <input style="margin: 10px 0; padding: 8px;" type="text" name="fname" placeholder="First Name">
+                    <input style="margin: 10px 0; padding: 8px;" type="text" name="lname" placeholder="Last Name">
+                    <input style="margin: 10px 0; padding: 8px;" type="email" name="email" placeholder="Email Address">
+                    <input style="margin: 10px 0; padding: 8px;" type="password" name="password" placeholder="Old password">
+                    <input style="margin: 10px 0; padding: 8px;" type="password" name="newpassword" placeholder="New password">
+                    <button type="submit" name="edit" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px; margin: 20px auto;">Edit Details &nbsp;<i class="fa-solid fa-pen-to-square"></i></button>
                 </form>
             </section>
 
